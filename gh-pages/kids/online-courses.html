@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>景秀小学线上教学课程表(1-3年级)</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="col text-center mt-2 mb-4">景秀小学线上教学课程表(1-3年级)</h2>
+        <table class="table table-stripped table-bordered">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>周一</th>
+                    <th>周二</th>
+                    <th>周三</th>
+                    <th>周四</th>
+                    <th>周五</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>第一节<br>9:00-9:20</td>
+                    <td><a href="">语文</a></td>
+                    <td><a href="">数学</a></td>
+                    <td><a href="">英语</a></td>
+                    <td><a href="">英语</a></td>
+                    <td><a href="">语文</a></td>
+                </tr>
+                <tr>
+                    <td>第二节<br>9:40-10:00</td>
+                    <td><a href="">综合实践一</a></td>
+                    <td><a href="">科学素养</a></td>
+                    <td><a href="">综合实践二</a></td>
+                    <td><a href="">道法</a></td>
+                    <td><a href="">音乐</a></td>
+                </tr>
+                <tr>
+                    <td>第三节<br>10:40-11:00</td>
+                    <td><a href="">英语</a></td>
+                    <td><a href="">语文</a></td>
+                    <td><a href="">数学</a></td>
+                    <td><a href="">语文</a></td>
+                    <td><a href="">数学</a></td>
+                </tr>
+                <tr>
+                    <td>第四节<br>2:30-2:50</td>
+                    <td><a href="">道法</a></td>
+                    <td><a href="">美术</a></td>
+                    <td><a href="">音乐</a></td>
+                    <td><a href="">美术</a></td>
+                    <td><a href="">线上班会</a></td>
+                </tr>
+                <tr>
+                    <td>第五节<br>3:10-3:30</td>
+                    <td><a href="">数学</a></td>
+                    <td><a href="">英语</a></td>
+                    <td><a href="">语文</a></td>
+                    <td><a href="">数学</a></td>
+                    <td><a href="">英语</a></td>
+                </tr>
+                <tr>
+                    <td>第六节<br>3:50-4:10</td>
+                    <td><a href="">体育</a></td>
+                    <td><a href="">体育</a></td>
+                    <td><a href="">体育</a></td>
+                    <td><a href="">体育</a></td>
+                    <td><a href="">体育</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        var links = {
+            '语文': 'https://ke.qq.com/webcourse/index.html?cid=1260861&term_id=101357931&lite=1&from=800021724',
+            '数学': 'https://ke.qq.com/webcourse/index.html?cid=1256756&term_id=101353826&lite=1&from=800021724',
+            '英语': 'https://ke.qq.com/webcourse/index.html?cid=1266762&term_id=101363833&lite=1&from=800021724',
+            '音乐': 'https://ke.qq.com/webcourse/index.html?cid=1254589&term_id=101351659&lite=1&from=800021724',
+            '道法': 'https://ke.qq.com/webcourse/index.html?cid=1276076&term_id=101373147&lite=1&from=800021724',
+            '美术': 'https://ke.qq.com/webcourse/index.html?cid=1261184&term_id=101358254&lite=1&from=800021724',
+            '体育': 'https://ke.qq.com/webcourse/index.html?cid=1275415&term_id=101372486&lite=1&from=800021724',
+            '科学素养': 'https://ke.qq.com/webcourse/index.html?cid=1260599&term_id=101357669&lite=1&from=800021724',
+            '综合实践一': 'https://ke.qq.com/webcourse/index.html?cid=1263010&term_id=101360080&lite=1&from=800021724',
+            '综合实践二': 'https://ke.qq.com/webcourse/index.html?cid=1263010&term_id=101360080&lite=1&from=800021724',
+            '线上班会': 'https://ke.qq.com/webcourse/index.html?cid=1260861&term_id=101357931&lite=1&from=800021724'
+        }
+        $(function () {
+            $("a").each(function (index, elem) {
+                elem = $(elem);
+                var key = elem.text().trim();
+                if (!elem.attr('href')) {
+                    var link = links[key];
+                    if (link) {
+                        elem.attr('href', link);
+                    } else {
+                        elem.css('color', 'red');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
